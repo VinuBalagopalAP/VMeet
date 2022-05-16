@@ -1,0 +1,34 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "emulators": {
+    "auth": {
+      "port": 9003
+    },
+    "firestore": {
+      "port": 5033
+    },
+    "hosting": {
+      "port": 4000
+    },
+    "ui": {
+      "enabled": true,
+      "port": 8080
+    }
+  }
+}
