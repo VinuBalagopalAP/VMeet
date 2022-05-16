@@ -1,0 +1,61 @@
+.usecase {
+    width: 100%;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+.video1 {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 7px;
+
+}
+
+.use-heading-box {
+    padding: 6rem 7rem;
+    font-size: 5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.card-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 6rem;
+}
+
+.card {
+    width: 55rem;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.card-image {
+    width: 50rem;
+    height: 30rem;
+}
+
+.card-heading {
+    font-size: 4rem;
+}
+
+.card-para {
+    font-size: 2rem;
+    color: gray;
+    text-align: justify;
+}
+
+@media screen and (max-width: 480px) {
+    .card-box {
+        width: 84%;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}

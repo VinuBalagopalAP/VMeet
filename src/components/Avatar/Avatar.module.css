@@ -1,0 +1,68 @@
+.avatar {
+    background-color: #F1EEE9;
+}
+
+.bg {
+    width: 100%;
+    display: flex;
+    padding: 4rem 7rem;
+}
+
+.textBox {
+    flex-basis: 58%;
+    margin: auto 0;
+}
+
+.heading {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.para {
+    font-size: 2.5rem;
+}
+
+.avatarBox {
+    margin: 0 auto;
+}
+
+.avImg {
+    width: 90%;
+}
+
+.looking {
+    margin-top: 4rem;
+    background-color: #141416;
+    padding: 3rem 3rem;
+    color: rgb(229, 226, 226);
+    border-radius: 25px;
+    display: flex;
+}
+
+.lookBox {
+    flex-basis: 70%;
+}
+
+.lookHeading {
+    font-size: 3rem;
+}
+
+.paralook {
+    font-size: 1.6rem;
+}
+
+.btnBox {
+    margin: auto 0;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    padding: 1.5rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    width: 18rem;
+}

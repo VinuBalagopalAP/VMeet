@@ -1,0 +1,51 @@
+.showcase {
+    /* background-image: background-color: #2d3436; */
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    padding: 7rem 5rem;
+}
+
+.showDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.headingBox {
+    color: white;
+    /* margin: 0 auto; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.para {
+    font-size: 2rem;
+}
+
+.imageContainer {
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.imageBox {
+    flex-basis: 50%;
+    object-fit: cover;
+    padding: 1rem;
+    margin: 0 auto;
+}   
+
+
+.imageBox img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 9px;
+}
