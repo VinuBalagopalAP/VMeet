@@ -87,7 +87,7 @@ const Footer = () => {
       </div>
       <hr className={classes.hr} />
       <p className={classes.copyright}>
-        Vmeet | Copyright &#169; All rights reserved.
+        VMeet | Copyright &#169; All rights reserved.
       </p>
     </footer>
   );
