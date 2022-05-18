@@ -16,11 +16,11 @@ const Footer = () => {
         <div className={classes.vmeetlogo}>
           <img
             className={classes.karma}
-            src="assets/logo-vmeet.png"
+            src="assets/Logo-vmeet.png"
             alt="Vmeet logo"
           />
           <p className={classes.para}>
-          Meet, share and collaborate together in private 3D virtual spaces.
+            Meet, share and collaborate together in private 3D virtual spaces.
           </p>
         </div>
 
@@ -31,7 +31,6 @@ const Footer = () => {
           <p>Kozhikode - 673601</p>
 
           {/* <p className={classes.email}>finushaheem@gmail.com</p> */}
-      
         </div>
 
         <div className={`${classes.col} ${classes.links}`}>
@@ -88,9 +87,7 @@ const Footer = () => {
       </div>
       <hr className={classes.hr} />
       <p className={classes.copyright}>
-
-      Vmeet | Copyright &#169; All rights reserved.
-
+        Vmeet | Copyright &#169; All rights reserved.
       </p>
     </footer>
   );
