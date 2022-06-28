@@ -1,0 +1,8 @@
+10:11:47.160 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+10:11:47.413 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+10:11:53.853 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - vmeet-kmct-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 158ms, init: 0ms
+10:11:53.921 [NamespaceSystem-blocking-namespace-operation-dispatcher-7:vmeet-kmct-default-rtdb$99677669:] INFO com.firebase.core.namespace.StateManager - Namespace vmeet-kmct-default-rtdb status Active to Active
+10:20:40.332 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+10:20:40.362 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: vmeet-kmct-default-rtdb
+10:20:40.372 [NamespaceSystem-akka.actor.default-dispatcher-11] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for vmeet-kmct-default-rtdb
+10:20:40.378 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.

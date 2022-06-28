@@ -17,14 +17,14 @@
       "port": 9003
     },
     "firestore": {
-      "port": 5033
+      "port": 8080
     },
     "hosting": {
       "port": 4000
     },
     "ui": {
       "enabled": true,
-      "port": 8080
+      "port": 8081
     },
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }

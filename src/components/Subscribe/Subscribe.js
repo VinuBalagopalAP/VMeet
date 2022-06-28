@@ -1,26 +1,50 @@
+import React from "react";
+import { auth } from "../../FirebaseConfig";
 import "./Subscribe.css";
 
-const Subscribe = () => {
-  // const [email, setemail] = useState('');
-  // const [password, setpassword] = useState('');
-  // const auth = getAuth();
-  // const signup = (event) => {
-  //     event.preventDefault();
-  //     sendSignInLinkToEmail(auth, email)
-  //         .then(() => {
-  //             // The link was successfully sent. Inform the user.
-  //             // Save the email locally so you don't need to ask the user for it again
-  //             // if they open the link on the same device.
-  //             alert("send email")
-  //             window.localStorage.setItem('emailForSignIn', email);
-  //             // ...
-  //         }).catch((error) => {
-  //             const errorCode = error.code;
-  //             const errorMessage = error.message;
-  //             // ...
-  //         });
+import { Auth } from "../../FirebaseConfig";
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+} from "firebase/auth";
+import { useEffect, useState } from "react";
 
-  // }
+const Subscribe = () => {
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [status, setStatus] = useState(false);
+
+  useEffect(() => {
+    setFname(localStorage.getItem("first"));
+    setLname(localStorage.getItem("last"));
+    setEmail(localStorage.getItem("email"));
+  }, []);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    createUserWithEmailAndPassword(Auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        setStatus(true);
+        const user = userCredential.user;
+        localStorage.setItem("userid", user.uid);
+        localStorage.setItem("email", email);
+        localStorage.setItem("first", fname);
+        localStorage.setItem("last", lname);
+        sendEmailVerification(Auth.currentUser).then(() =>
+          alert("Check your Inbox & Verify your email address")
+        );
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+      });
+  };
 
   return (
     <section className="subSection">
@@ -40,36 +64,56 @@ const Subscribe = () => {
             <div className="sub-form-headingBox">
               <h3 className="sub-form-heading">Sign in</h3>
             </div>
-            <form action="" className="form">
+            <form action="" className="form" onSubmit={submitHandler}>
               <input
                 type="text"
                 className="subs-input"
                 placeholder="First Name"
+                value={fname}
+                onChange={(e) => setFname(e.target.value)}
               />
               <input
                 type="text"
                 className="subs-input l-input"
                 placeholder="Last Name"
+                value={lname}
+                onChange={(e) => setLname(e.target.value)}
               />
               <input
                 type="email"
                 className="subs-input mail-input"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="password"
                 className="subs-input pass-input"
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <button className="subbtn">Submit</button>
+              <button className="subbtn" onClick={submitHandler}>
+                Submit
+              </button>
             </form>
+            {status && (
+              <p
+                style={{
+                  color: "white",
+                  fontSize: "16px",
+                  textAlign: "center",
+                }}
+              >
+                {" "}
+                Thank you for Signing Up !
+              </p>
+            )}
           </div>
         </div>
       </div>
     </section>
   );
-  // onChange={(e) => { setemail(e.target.value) }}
-  // onChange={(e) => { setpassword(e.target.value) }}
 };
 
 export default Subscribe;
